@@ -17,6 +17,13 @@
 
 .game-container{
     padding: 2rem; 
+    position: relative;
+}
+
+.about-game{
+    position: absolute;
+    right: 5%;
+    bottom: 0;
 }
 body{
     height: 100vh; 
