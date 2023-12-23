@@ -43,6 +43,11 @@ body{
     text-align: center;
 }
 
+:dark-mode{
+    background-color: var(--Dark-blue);
+    color: var(--light-grey);
+}
+
 img{
     max-width: 100%;
 }
