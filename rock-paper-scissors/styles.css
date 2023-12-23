@@ -1,0 +1,10 @@
+:root{
+    /* background */
+    --light-grey: hsl(200, 16%, 95%);
+    --torquiose: HSL: hsl(172, 69%, 56%);
+    /* primary color */
+    --Dogger-blue:  hsl(214, 66%, 53%);
+    --Slate-slue: hsl(232, 26%, 46%);
+    /* text-color */
+    --Dark-blue: hsl(244, 59%, 18%);
+}
