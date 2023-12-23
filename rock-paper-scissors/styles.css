@@ -19,12 +19,4 @@ img{
     max-width: 100%;
 }
 
-.theme-toggler img{ 
-    width: 20px; 
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    cursor: pointer;
-    z-index: 100; 
-}
 
