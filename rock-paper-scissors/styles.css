@@ -1,7 +1,7 @@
 :root{
     /* background */
     --light-grey: hsl(200, 16%, 95%);
-    --torquiose: HSL: hsl(172, 69%, 56%);
+    --torquiose: hsl(172, 69%, 56%);  
     /* primary color */
     --Dogger-blue:  hsl(214, 66%, 53%);
     --Slate-slue: hsl(232, 26%, 46%);
@@ -23,7 +23,15 @@
 .about-game{
     position: absolute;
     right: 5%;
-    bottom: 0;
+    bottom: 0%; 
+}
+
+.about-game button{
+    border: 1px groove var(--Dark-blue); 
+    color: var(--light-grey);
+    background-color: var(--Dogger-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 body{
     height: 100vh; 
