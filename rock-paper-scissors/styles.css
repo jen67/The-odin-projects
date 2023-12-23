@@ -15,6 +15,9 @@
     box-sizing: border-box;
 }
 
+.game-container{
+    padding: 2rem; 
+}
 body{
     height: 100vh; 
     background-color: var(--light-grey);
@@ -32,8 +35,8 @@ img{
 .theme-toggler img{
     position: absolute;
     right: 0;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 .light-toggle{
