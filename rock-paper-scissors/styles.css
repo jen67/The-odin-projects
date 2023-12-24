@@ -43,9 +43,13 @@ body{
     text-align: center;
 }
 
-:dark-mode{
+.dark-mode{
     background-color: var(--Dark-blue);
     color: var(--light-grey);
+}
+
+.hide-image{
+    display: none;
 }
 
 img{
