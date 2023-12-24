@@ -74,6 +74,10 @@ body{
     overflow: hidden; 
 }
 
+
+.header-img{
+    width: 200px
+}
 .dark-mode{
     background-color: var(--Dark-blue);
     color: var(--light-grey);
