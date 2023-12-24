@@ -85,7 +85,13 @@ h1{
         height: 50px;
     }
     h1{
-        font-size: 8rem; 
+        font-size: 5rem; 
         margin-top: 0;
     }
 } 
+
+@media screen and (min-width: 1280px){
+    h1{
+        font-size: 8rem; 
+    }
+}
