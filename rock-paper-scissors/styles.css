@@ -92,7 +92,8 @@ body{
 }
 
 
-svg{ 
+svg{
+    cursor: pointer; 
     width: 200px;
     height: 200px;
     max-width:500px;
@@ -177,5 +178,29 @@ h1{
         font-size: 4rem; 
         font-weight: 400;
     }
+
+    .play-option button{
+        font-size: 1rem;
+        padding: 0.7rem 3rem;
+    }
+
+    .play-option button:hover, .play-option button:active, .play-option button:focus{
+background-color: var(--light-grey);
+    color: var(--Dark-blue);
+    font-weight: 700;
+    box-shadow: 
+        0 0 0 4px var(--light-grey), 
+        0 0 0 6px var(--Dogger-blue); 
+}
+
+.dark-mode .play-option button:hover, .dark-mode .play-option button:active, .dark-mode .play-option button:focus{
+    background-color: var(--Dark-blue);
+    color: var(--light-grey);
+    font-weight: 700;
+    box-shadow: 
+        0 0 0 4px var(--light-grey), 
+        0 0 0 8px var(--Dogger-blue); 
+}
+
 } 
 
