@@ -6,12 +6,18 @@
     <meta name="description" content="This is a rock-paper-scissors game">
     <meta name="author" content="Gift Amachree">
     <link rel="icon" href="./images/hand-rock-o.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
     <title>Rock-Paper-Scissors game</title>
 </head>
 <body>
     <main>
         <div class="game-container">
-            <div class="heaer">
+            <div class="theme-toggler">
+                <img src="./images/darktheme.svg" class="dark-toggle" alt="dark-theme toggle">
+                <img src="./images/lighttheme.svg" class="light-toggle" alt="light-theme toggle">
+            </div>
+
+            <div class="header">
                 <h1>Welcome player</h1>
             </div>
             <div class="score-board">
@@ -24,11 +30,21 @@
                     <p>0</p>
                 </div>
 
-                <div class="handOption">
+                <div class="handDisplay">
                     
+                </div>
+
+                <div class="choices">
+                    <button class="rock">Rock</button>
+                    <button class="paper">Paper</button>
+                    <button class="scissors">Scissors</button>
+                 </div>
+
+                <div class="about-game">
+                    <button>Reset</button>
                 </div>
         </div>
     </main>
-    
+    <script src="./script.js"></script>
 </body>
 </html>
