@@ -40,18 +40,18 @@ body {
   cursor: pointer;
   margin-top: 6rem;
   border: 1px groove var(--Dark-blue);
-  color: var(--light-grey);
-  background-color: var(--Dogger-blue);
+  color: var(--Dark-blue);
+  background-color: var(--light-grey); 
   font-size: 0.8rem;
   padding: 0.5rem 2rem;
   border-radius: 5px;
 }
 
-.about-game button:hover,
-.about-game button:focus,
-.about-game button:active,
-.dark-mode button:focus,
-.dark-mode button:active {
+.play-option button:hover,
+.play-option button:focus,
+.play-option button:active,
+.play-option button:focus,
+.play-option button:active {
   background-color: var(--Dark-blue);
   color: var(--light-grey);
   font-weight: 700;
@@ -67,9 +67,9 @@ body {
   box-shadow: 0 0 0 2px var(--light-grey), 0 0 0 4px var(--Dogger-blue);
 }
 
-.play-option button:hover,
-.play-option button:active,
-.play-option button:focus {
+.about-game button:hover,
+.about-game button:active,
+.about-game button:focus {
   background-color: var(--light-grey);
   color: var(--Dark-blue);
   font-weight: 700;
@@ -159,6 +159,10 @@ h1 {
 }
 
 .play-option button {
+  background-color: var(--Dogger-blue); 
+  color: var(--light-grey);
+  border: 1px groove var(--Dark-blue);
+  outline: none;
   margin-top: 0.5rem;
   padding: 0.5rem 2rem;
   font-weight: 700;
@@ -185,9 +189,9 @@ h1 {
     padding: 0.7rem 3rem;
   }
 
-  .play-option button:hover,
-  .play-option button:active,
-  .play-option button:focus {
+  .about-game button:hover,
+  .about-game button:active,
+  .about-game button:focus {
     background-color: var(--light-grey);
     color: var(--Dark-blue);
     font-weight: 700;
@@ -209,11 +213,11 @@ h1 {
     margin-bottom: 1rem;
   }
 
-  .about-game button:hover,
-  .about-game button:focus,
-  .about-game button:active,
-  .dark-mode button:focus,
-  .dark-mode button:active {
+  .play-option button:hover,
+  .play-option button:focus,
+  .play-option button:active,
+  .play-option button:focus,
+  .play-option button:active {
     background-color: var(--Dark-blue);
     color: var(--light-grey);
     font-weight: 700;
