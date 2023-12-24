@@ -45,6 +45,15 @@
         0 0 0 4px var(--Dogger-blue);  
 } 
 
+.about-game button:hover, .dark-mode button:focus , .dark-mode button:active{
+    background-color: var(--Dark-blue);
+    color: var(--light-grey);
+    font-weight: 700;
+    box-shadow: 
+        0 0 0 2px var(--light-grey),  
+        0 0 0 4px var(--Dogger-blue); 
+}
+
 
 
 .game-body{ 
