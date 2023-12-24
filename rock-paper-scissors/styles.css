@@ -47,11 +47,11 @@ body {
   border-radius: 5px;
 }
 
-.play-option button:hover,
-.play-option button:focus,
-.play-option button:active,
-.play-option button:focus,
-.play-option button:active {
+.play-option a:hover,
+.play-option a:focus,
+.play-option a:active,
+.play-option a:focus,
+.play-option a:active {
   background-color: var(--Dark-blue);
   color: var(--light-grey);
   font-weight: 700;
@@ -76,9 +76,9 @@ body {
   box-shadow: 0 0 0 2px var(--light-grey), 0 0 0 4px var(--Dogger-blue);
 }
 
-.dark-mode .play-option button:hover,
-.dark-mode .play-option button:active,
-.dark-mode .play-option button:focus {
+.dark-mode .play-option a:hover,
+.dark-mode .play-option a:active,
+.dark-mode .play-option a:focus {
   background-color: var(--Dark-blue);
   color: var(--light-grey);
   font-weight: 700;
@@ -158,7 +158,7 @@ h1 {
   display: none;
 }
 
-.play-option button {
+.play-option a {
   background-color: var(--Dogger-blue); 
   color: var(--light-grey);
   border: 1px groove var(--Dark-blue);
@@ -168,6 +168,7 @@ h1 {
   font-weight: 700;
   border-radius: 5px;
   font-size: 0.8rem;
+  text-decoration: none; 
 }
 .dark-mode .triangle{
     stroke: var(--light-grey); 
@@ -184,7 +185,7 @@ h1 {
     font-weight: 400;
   }
 
-  .play-option button {
+  .play-option a {
     font-size: 1rem;
     padding: 0.7rem 3rem;
   }
@@ -198,9 +199,9 @@ h1 {
     box-shadow: 0 0 0 4px var(--light-grey), 0 0 0 8px var(--Dogger-blue);
   }
 
-  .dark-mode .play-option button:hover,
-  .dark-mode .play-option button:active,
-  .dark-mode .play-option button:focus {
+  .dark-mode .play-option a:hover,
+  .dark-mode .play-option a:active,
+  .dark-mode .play-option a:focus {
     background-color: var(--Dark-blue);
     color: var(--light-grey);
     font-weight: 700;
@@ -213,11 +214,11 @@ h1 {
     margin-bottom: 1rem;
   }
 
-  .play-option button:hover,
-  .play-option button:focus,
-  .play-option button:active,
-  .play-option button:focus,
-  .play-option button:active {
+  .play-option a:hover,
+  .play-option a:focus,
+  .play-option a:active,
+  .play-option a:focus,
+  .play-option a:active {
     background-color: var(--Dark-blue);
     color: var(--light-grey);
     font-weight: 700;
