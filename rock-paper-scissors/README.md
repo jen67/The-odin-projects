@@ -4,7 +4,8 @@ This is one of the projects given in the-odin-foundation projects
 
 ## Algorithm
 
-```
+```bash
+
 Steps in the Rock, Paper, Scissors game:
 
 1. Display a welcome message to the user.
