@@ -21,9 +21,9 @@
 }
 
 .about-game{
-    position: absolute;
-    right: 5%;
-    bottom: 0%; 
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .about-game button{
@@ -69,3 +69,14 @@ h1{
 }
 
 
+@media screen and (min-width: 768px){
+    
+    .theme-toggler img{
+        width: 30px;
+        height: 30px;
+    }
+    h1{
+        font-size: 8rem; 
+        margin-top: 0;
+    }
+} 
