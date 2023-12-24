@@ -31,7 +31,7 @@
     border: 1px groove var(--Dark-blue); 
     color: var(--light-grey);
     background-color: var(--Dogger-blue);
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 0.5rem 2rem;
     border-radius: 5px;
 }
@@ -92,9 +92,14 @@ body{
 }
 
 
-.header-img{
+svg{ 
     width: 200px;
+    height: 200px;
     max-width:500px;
+}
+
+.dark-mode svg{
+    fill: var(--light-grey);
 }
 
 .dark-mode{
@@ -115,7 +120,7 @@ img{
 }
 
 h1{
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 .light-toggle{
@@ -127,22 +132,18 @@ h1{
     padding: 0.5rem 2rem;
     font-weight: 700; 
     border-radius: 5px;
+    font-size: 0.8rem;
 }
 @media screen and (min-width: 768px){
     
-    .header-img{
+    svg{
         width: 400px;
+        height: 400px; 
     }
     
     h1{
-        font-size: 5rem; 
-        margin-top: 0;
+        font-size: 4rem; 
+        font-weight: 400;
     }
 } 
 
-@media screen and (min-width: 1280px){
-    h1{
-        font-size: 6rem; 
-        font-weight: 500;
-    }
-}
