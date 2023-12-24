@@ -98,13 +98,36 @@ svg{
     max-width:500px;
 }
 
-svg g:hover {
-  fill: #ff0000;
-  stroke: #000;
-  stroke-width: 2;
-  cursor: pointer;
+g{ 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+.item-label {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
+.rock:hover .item-label, 
+.rock:focus .item-label, 
+.rock:active .item-label { 
+    visibility: visible;
+    opacity: 1;
+}
+
+.paper:hover .item-label,
+.paper:focus .item-label,
+.paper:active .item-label { 
+    visibility: visible;
+    opacity: 1;
+}
+
+.scissors:hover .item-label,
+.scissors:focus .item-label,
+.scissors:active .item-label { 
+    visibility: visible;
+    opacity: 1;
+}
 
 
 .dark-mode svg{
