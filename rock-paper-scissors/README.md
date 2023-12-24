@@ -25,3 +25,39 @@ Steps in the Rock, Paper, Scissors game:
 3. Display a goodbye message to the user.
 
 ```
+
+## Pseudocode
+
+```javaScript
+function getUserChoice() {
+    // Prompt the user to enter their choice (Rock, Paper, or Scissors)
+    // Validate the input to ensure it is a valid choice
+    // Return the user's choice
+}
+
+function getComputerChoice() {
+    // Generate a random number (1, 2, or 3) to represent Rock, Paper, or Scissors
+    // Assign Rock, Paper, or Scissors based on the generated number
+    // Return the computer's choice
+}
+
+function playRound(playerSelection, computerSelection) {
+    // Compare PlayerSelection and computerSelection to determine the winner
+    // Display the result to the user
+
+    // Check for a tie
+    if (playerSelection === computerSelection) {
+        return "It's a tie! Replay the round.";
+    }
+
+}
+
+function playGame() {
+    userChoice = getUserChoice()
+    computerChoice = getComputerChoice()
+    playRound(userChoice, computerChoice) 
+}
+
+// Call the playGame function to start the game
+playGame()
+```
