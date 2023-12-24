@@ -4,7 +4,7 @@ This is one of the projects given in the-odin-foundation projects
 
 ## Algorithm
 
-```bash
+```plaintext
 
 Steps in the Rock, Paper, Scissors game:
 
