@@ -26,12 +26,26 @@
 }
 
 .about-game button{
+    cursor: pointer;
+    margin-top: 6rem;
     border: 1px groove var(--Dark-blue); 
     color: var(--light-grey);
     background-color: var(--Dogger-blue);
-    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
     border-radius: 5px;
 }
+
+.about-game button:hover, button:focus , button:active{ 
+    background-color: var(--light-grey);
+    color: var(--Dark-blue);
+    font-weight: 700;
+    box-shadow: 
+        0 0 0 2px var(--light-grey), 
+        0 0 0 4px var(--Dogger-blue);  
+} 
+
+
 
 .game-body{ 
        height: 100vh;
