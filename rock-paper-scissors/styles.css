@@ -54,7 +54,23 @@
         0 0 0 4px var(--Dogger-blue);  
 } 
 
+.play-option button:hover, .play-option button:active, .play-option button:focus{
+background-color: var(--light-grey);
+    color: var(--Dark-blue);
+    font-weight: 700;
+    box-shadow: 
+        0 0 0 2px var(--light-grey), 
+        0 0 0 4px var(--Dogger-blue); 
+}
 
+.dark-mode .play-option button:hover, .dark-mode .play-option button:active, .dark-mode .play-option button:focus{
+    background-color: var(--Dark-blue);
+    color: var(--light-grey);
+    font-weight: 700;
+    box-shadow: 
+        0 0 0 2px var(--light-grey), 
+        0 0 0 4px var(--Dogger-blue); 
+}
 
 .game-body{ 
        height: 100vh;
