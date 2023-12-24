@@ -98,6 +98,15 @@ svg{
     max-width:500px;
 }
 
+svg g:hover {
+  fill: #ff0000;
+  stroke: #000;
+  stroke-width: 2;
+  cursor: pointer;
+}
+
+
+
 .dark-mode svg{
     fill: var(--light-grey);
 }
