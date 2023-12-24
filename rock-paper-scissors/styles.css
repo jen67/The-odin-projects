@@ -36,7 +36,7 @@
     border-radius: 5px;
 }
 
-.about-game button:hover, button:focus , button:active{ 
+.dark-mode .about-game button:hover, .dark-mode button:focus , .dark-mode button:active{ 
     background-color: var(--light-grey);
     color: var(--Dark-blue);
     font-weight: 700;
