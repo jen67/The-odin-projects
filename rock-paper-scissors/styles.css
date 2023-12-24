@@ -26,6 +26,8 @@ body {
   font-family: sans-serif;
 }
 
+
+/* landing page */
 .game-container {
   padding: 2rem;
   position: relative;
@@ -174,7 +176,7 @@ h1 {
     stroke: var(--light-grey); 
 }
 
-
+/* My main game  */
 .user {
     transform: scaleX(1) rotate(90deg);
 }
