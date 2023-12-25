@@ -213,6 +213,24 @@ h1 {
 .handDisplay img{
   width: 50px; 
 }
+
+.choices{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+} 
+.choices button{
+  cursor: pointer;
+  border: 1px groove var(--Dark-blue);
+  color: var(--light-grey);
+  background-color: var(--Dogger-blue); 
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  outline: none;
+}
 @media screen and (min-width: 768px) {
   svg {
     width: 400px;
