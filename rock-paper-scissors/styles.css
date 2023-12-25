@@ -316,6 +316,9 @@ h1 {
   font-size: 1.5rem;
 }
 
+.choices{
+    gap: 2rem; 
+}
 .choices button{
   font-size: 1.5rem;
   padding: 0.5rem 2rem;
