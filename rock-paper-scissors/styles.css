@@ -231,6 +231,28 @@ h1 {
   border-radius: 5px;
   outline: none;
 }
+
+.rock:hover, .rock:focus, .rock:active{
+  background-color: var(--Dark-blue);
+  color: var(--light-grey);
+  font-weight: 700;
+  box-shadow: 0 0 0 2px var(--light-grey), 0 0 0 4px var(--Dogger-blue);
+}
+
+.paper:hover, .paper:active, .paper:focus{
+  background-color: var(--Dark-blue);
+  color: var(--light-grey);
+  font-weight: 700;
+  box-shadow: 0 0 0 2px var(--light-grey), 0 0 0 4px var(--Dogger-blue);
+}
+.scissors:hover, .scissors:active, .scissors:focus{
+  background-color: var(--Dark-blue);
+  color: var(--light-grey);
+  font-weight: 700;
+  box-shadow: 0 0 0 2px var(--light-grey), 0 0 0 4px var(--Dogger-blue);
+}
+
+
 @media screen and (min-width: 768px) {
   svg {
     width: 400px;
