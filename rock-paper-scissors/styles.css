@@ -197,6 +197,11 @@ h1 {
   margin-top: 2rem;
   gap: 4rem;
 }
+
+.player-score, .computer-score{
+  font-weight: 700;
+}
+
 @media screen and (min-width: 768px) {
   svg {
     width: 400px;
@@ -260,4 +265,8 @@ h1 {
   .score-board{
     gap: 6rem;
   }
+
+  .player-score, .computer-score{
+  font-size: 1.5rem;
+}
 }
