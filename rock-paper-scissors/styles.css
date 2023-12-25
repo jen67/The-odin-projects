@@ -202,6 +202,17 @@ h1 {
   font-weight: 700;
 }
 
+.handDisplay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.handDisplay img{
+  width: 50px; 
+}
 @media screen and (min-width: 768px) {
   svg {
     width: 400px;
@@ -269,4 +280,14 @@ h1 {
   .player-score, .computer-score{
   font-size: 1.5rem;
 }
+
+
+.handDisplay{
+  gap: 6rem;
+}
+
+.handDisplay img{
+  width: 80px; 
+}
+
 }
