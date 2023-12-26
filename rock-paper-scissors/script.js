@@ -37,6 +37,9 @@ function game() {
     const playOptions = document.querySelectorAll(".choices button");
     const playerHand = document.querySelector(".playerhand");
     const computerHand = document.querySelector(".computerhand");
+    const player = document.querySelector("#pscore");
+    const computer = document.querySelector("#cscore");
+    const winner = document.querySelector(".results");
 
     //computer options
     const computerOptions = ["rock", "paper", "scissors"];
@@ -53,55 +56,53 @@ function game() {
         //update images
         playerHand.src = `./images/${this.textContent}.svg`;
         computerHand.src = `./images/${computerChoice}.svg`;
+
+        // update scores
+        player.textContent = playerScore;
+        computer.textContent = computerScore;
       });
     });
   }
 
   const compareMatch = (playerChoice, computerChoice) => {
-    const winner = document.querySelector(".results");
-    const playerScoreDisplay = document.querySelector("#pscore");
-    const computerScoreDisplay = document.querySelector("#cscore");
 
     // checking for a tie
     if (playerChoice === computerChoice) {
       winner.textContent = "It's a tie";
-      return;
-    }
+    } else {
+      //checking for rock
+      if (playerChoice === "rock") {
+        if (computerChoice === "scissors") {
+          winner.textContent = "You win";
+          playerScore++;
+        } else {
+          winner.textContent = "Computer wins";
+          computerScore++;
+        }
+      }
 
-    //checking for rock
-    if (playerChoice === "rock") {
-      if (computerChoice === "scissors") {
-        winner.textContent = "You win";
-        playerScore++;
-      } else {
-        winner.textContent = "Computer wins";
-        computerScore++;
+      // checking for paper
+      if (playerChoice === "paper") {
+        if (computerChoice === "scissors") {
+          winner.textContent = "Computer wins";
+          computerScore++;
+        } else {
+          winner.textContent = "You win";
+          playerScore++;
+        }
+      }
+
+      //checking for scissors
+      if (playerChoice === "scissors") {
+        if (computerChoice === "rock") {
+          winner.textContent = "Computer wins";
+          computerScore++;
+        } else {
+          winner.textContent = "You win";
+          playerScore++;
+        }
       }
     }
-
-    // checking for paper
-    if (playerChoice === "paper") {
-      if (computerChoice === "scissors") {
-        winner.textContent = "Computer wins";
-        computerScore++;
-      } else {
-        winner.textContent = "You win";
-        playerScore++;
-      }
-    }
-
-    //checking for scissors
-    if (playerChoice === "scissors") {
-      if (computerChoice === "rock") {
-        winner.textContent = "Computer wins";
-        computerScore++;
-      } else {
-        winner.textContent = "You win";
-        playerScore++;
-      }
-      }
-      
-
   };
 
   playOptions();
