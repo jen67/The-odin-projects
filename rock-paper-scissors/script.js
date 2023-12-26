@@ -55,10 +55,15 @@ function game() {
 
     const compareMatch = (playerChoice, computerChoice) => {
         const winner = document.querySelector(".result h2");
-        if (computerChoice === playerChoice) {
+        if (playerChoice === computerChoice) {
             winner.textContent = "It's a tie";
             return;
         }
+
+        //rock
+        
+
+
     }
 
     playOptions(); 
