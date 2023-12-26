@@ -61,7 +61,11 @@ function game() {
         }
 
         //rock
-        
+        if (playerChoice === "rock") {
+            if (computerChoice === "scissors") {
+                
+            }
+        }
 
 
     }
