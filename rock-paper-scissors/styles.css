@@ -236,6 +236,9 @@ h1 {
   outline: none;
 }
 
+.home button{
+margin-top: 3rem;
+}
 .rock:hover, .rock:focus, .rock:active{
   background-color: var(--Dark-blue);
   color: var(--light-grey);
