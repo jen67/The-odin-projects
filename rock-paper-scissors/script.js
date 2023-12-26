@@ -47,6 +47,13 @@ function game() {
                 //computer choice
                 const computerNumber = Math.floor(Math.random() * 3);
                 const computerChoice = computerOptions[computerNumber];
+
+                //compare hands
+                compareMatch(this.textContent, computerChoice);
+
+                //update images
+                playerHand.src = `./images/${this.textContent}.svg`;
+                computerHand.src = `./images/${computerChoice}.svg`;
             });
         });
         
@@ -54,7 +61,7 @@ function game() {
     };
 
     const compareMatch = (playerChoice, computerChoice) => {
-        const winner = document.querySelector(".result h2");
+        const winner = document.querySelector(".results");
 
         // checking for a tie
         if (playerChoice === computerChoice) {
