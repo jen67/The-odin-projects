@@ -186,11 +186,11 @@ g {
 }
 
 /* My main game  */
-.user {
+.playerhand {
     transform: scaleX(1) rotate(90deg);
 }
 
-.computer {
+.computerhand {
     transform: scaleX(-1) rotate(70deg);
 } 
 

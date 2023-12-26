@@ -7,7 +7,7 @@ const gameContainer = document.querySelector(".game-container");
 const gameRulesContainer = document.querySelector(".about-game-modal");
 const closeBtn = document.querySelector(".close");
 
-
+//handles the game rules modal
 gameRules.addEventListener("click", () => { 
     gameRulesContainer.style.display = "block";
     gameContainer.style.display = "none";
@@ -33,5 +33,29 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
 
+    function playOptions() {
+        const playOptions = document.querySelectorAll(".choices button");
+        const playerHand = document.querySelector(".playerhand");
+        const computerHand = document.querySelector(".computerhand");
 
-}
+        //computer options
+        const computerOptions = ["rock", "paper", "scissors"];
+
+        playOptions.forEach((option) => { 
+            option.addEventListener("click", function () { 
+
+                //computer choice
+                const computerNumber = Math.floor(Math.random() * 3);
+                const computerChoice = computerOptions[computerNumber];
+                console.log(computerChoice);
+            });
+        });
+        
+        
+    };
+
+    playOptions(); 
+
+
+};
+game(); 
