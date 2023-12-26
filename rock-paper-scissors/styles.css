@@ -35,6 +35,11 @@ h1 {
   font-size: 2rem;
 }
 
+span{
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
 /* landing page */
 .game-container {
   padding: 2rem;
