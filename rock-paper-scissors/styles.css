@@ -35,6 +35,9 @@ h1 {
   font-size: 2rem;
 }
 
+.game-container{
+  display: none;
+}
 span{
   font-weight: 700;
   font-size: 1.3rem;
@@ -263,6 +266,21 @@ margin-top: 3rem;
 }
 
 
+.bout-game-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
 @media screen and (min-width: 768px) {
   svg {
     width: 400px;
