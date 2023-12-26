@@ -47,12 +47,19 @@ function game() {
                 //computer choice
                 const computerNumber = Math.floor(Math.random() * 3);
                 const computerChoice = computerOptions[computerNumber];
-                console.log(computerChoice);
             });
         });
         
         
     };
+
+    const compareMatch = (playerChoice, computerChoice) => {
+        const winner = document.querySelector(".result h2");
+        if (computerChoice === playerChoice) {
+            winner.textContent = "It's a tie";
+            return;
+        }
+    }
 
     playOptions(); 
 
