@@ -101,7 +101,10 @@ function game() {
           winner.textContent = "You win";
           playerScore++;
         }
-      }
+        }
+        
+        console.log("Player Score:", playerScore);
+        console.log("Computer Score:", computerScore);
     }
   };
 
