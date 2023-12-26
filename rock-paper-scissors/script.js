@@ -1,8 +1,16 @@
 const body = document.querySelector("body");
 const themeContainer = document.querySelector(".theme-toggler");
 const darkThemeToggler = document.querySelector(".dark-toggle");
-const lightThemeToggler = document.querySelector(".light-toggle")
+const lightThemeToggler = document.querySelector(".light-toggle");
+const gameRules = document.querySelector(".about-game button");
+const gameContainer = document.querySelector(".game-container");
+const gameRulesContainer = document.querySelector(".about-game-modal");
 
+
+gameRules.addEventListener("click", () => { 
+    gameRulesContainer.style.display = "block";
+    gameContainer.style.display = "none";
+});
 
 themeContainer.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
@@ -19,5 +27,5 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
 
-    
+
 }

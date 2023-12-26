@@ -34,9 +34,9 @@ h1 {
   font-size: 2rem;
 }
 
-.game-container{
+/* .game-container{
   display: none;
-}
+} */
 span{
   font-weight: 700;
   font-size: 1.3rem;
@@ -265,10 +265,7 @@ margin-top: 3rem;
 }
  
 .about-game-modal{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: none;
 }
 .about-game-modal-content img{
   margin-top: 3rem;
@@ -277,6 +274,7 @@ margin-top: 3rem;
 }
 
 .close{
+  cursor: pointer;
   font-size: 2rem;
   font-weight: 400;
   margin-top: 3rem;
