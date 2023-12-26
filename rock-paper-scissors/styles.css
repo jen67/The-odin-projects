@@ -185,19 +185,19 @@ h1 {
     transform: scaleX(-1) rotate(70deg);
 } 
 
-.home{
-  margin-top: 2rem;
-}
 
 .score-board{
   margin: 0 auto; 
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
   gap: 4rem;
 }
 
+.header{
+  margin-top: 2rem;
+}
 .player-score, .computer-score{
   font-weight: 700;
 }
