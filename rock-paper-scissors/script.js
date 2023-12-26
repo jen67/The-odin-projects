@@ -59,8 +59,8 @@ function game() {
 
   const compareMatch = (playerChoice, computerChoice) => {
     const winner = document.querySelector(".results");
-    const playerScoreDisplay = document.querySelector(".player-score p");
-    const computerScoreDisplay = document.querySelector(".computer-score p");
+    const playerScoreDisplay = document.querySelector("#pscore");
+    const computerScoreDisplay = document.querySelector("#cscore");
 
     // checking for a tie
     if (playerChoice === computerChoice) {
@@ -100,6 +100,7 @@ function game() {
         playerScore++;
       }
       }
+      
 
   };
 
