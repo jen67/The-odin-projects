@@ -99,10 +99,8 @@ function game() {
         winner.textContent = "You win";
         playerScore++;
       }
-    }
+      }
 
-    playerScoreDisplay.textContent = playerScore;
-    computerScoreDisplay.textContent = computerScore;
   };
 
   playOptions();
