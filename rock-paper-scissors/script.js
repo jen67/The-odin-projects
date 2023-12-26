@@ -55,17 +55,53 @@ function game() {
 
     const compareMatch = (playerChoice, computerChoice) => {
         const winner = document.querySelector(".result h2");
+
+        // checking for a tie
         if (playerChoice === computerChoice) {
             winner.textContent = "It's a tie";
             return;
         }
 
-        //rock
+        //checking for rock
         if (playerChoice === "rock") {
             if (computerChoice === "scissors") {
-                
+                winner.textContent = "You win";
+                playerScore++;
+                return;
+            }
+            else {
+                winner.textContent = "Computer wins";
+                computerScore++;
+                return;
             }
         }
+
+        // checking for paper
+        if (playerChoice === "paper") {
+          if (computerChoice === "scissors") {
+            winner.textContent = "Computer wins";
+            playerScore++;
+            return;
+          } else {
+            winner.textContent = "You win";
+            computerScore++;
+            return;
+          }
+        }
+
+        //checking for scissors
+        if (playerChoice === "scissors") {
+          if (computerChoice === "rock") {
+            winner.textContent = "Computer wins";
+            playerScore++;
+            return;
+          } else {
+            winner.textContent = "You win";
+            computerScore++;
+            return;
+          }
+        }
+
 
 
     }
