@@ -23,7 +23,6 @@ body {
   font-weight: 600;
   line-height: 1.6;
   text-align: center;
-  overflow: hidden;
   font-family: sans-serif;
 }
 
@@ -264,22 +263,23 @@ margin-top: 3rem;
   color: var(--light-grey);
   box-shadow: 0 0 0 2px var(--light-grey), 0 0 0 4px var(--Dogger-blue);
 }
-
-
-.bout-game-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.75);
+ 
+.about-game-modal{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
+  justify-content: center;
+}
+.about-game-modal-content img{
+  margin-top: 3rem;
+  max-width: 800px;
+  width: 80%; 
+}
+
+.close{
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 3rem;
 }
 @media screen and (min-width: 768px) {
   svg {
