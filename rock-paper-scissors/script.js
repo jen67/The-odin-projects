@@ -5,11 +5,17 @@ const lightThemeToggler = document.querySelector(".light-toggle");
 const gameRules = document.querySelector(".about-game button");
 const gameContainer = document.querySelector(".game-container");
 const gameRulesContainer = document.querySelector(".about-game-modal");
+const closeBtn = document.querySelector(".close");
 
 
 gameRules.addEventListener("click", () => { 
     gameRulesContainer.style.display = "block";
     gameContainer.style.display = "none";
+});
+
+closeBtn.addEventListener("click", () => { 
+    gameRulesContainer.style.display = "none";
+    gameContainer.style.display = "block";
 });
 
 themeContainer.addEventListener("click", () => {
