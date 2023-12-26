@@ -3,6 +3,11 @@ const themeContainer = document.querySelector(".theme-toggler");
 const darkThemeToggler = document.querySelector(".dark-toggle");
 const lightThemeToggler = document.querySelector(".light-toggle")
 
+let playerScore = 0;
+let computerScore = 0;  
+
+
+
 themeContainer.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
     darkThemeToggler.style.display = "block ";
