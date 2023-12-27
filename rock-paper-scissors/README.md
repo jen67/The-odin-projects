@@ -4,7 +4,7 @@ This is one of the projects given in the-odin-foundation projects
 
 ## Live Demo
 
-Visit the live demo [here](insert_link_here) to play the game interactively.
+Visit the live demo [here](https://github.com/jen67/The-odin-projects/rock-paper-scissors/)
 
 ## Algorithm
 
