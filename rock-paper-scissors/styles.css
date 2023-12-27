@@ -294,7 +294,7 @@ margin-top: 3rem;
 .winner-modal-content{
   background-color: var(--Slate-slue);
   color: var(--light-grey);
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   margin-top: 10rem;
   padding: 2rem;
@@ -303,7 +303,7 @@ margin-top: 3rem;
 }
 
 .winner{
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 
@@ -311,12 +311,12 @@ margin-top: 3rem;
   cursor: pointer;
   color: var(--Slate-slue);
   background-color: var(--light-grey); 
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: none;
   outline: none;
-  margin-top: 2rem;
+  margin: 2rem 0 2rem 0;
   font-weight: 700;
 }
 @media screen and (min-width: 768px) {
@@ -410,6 +410,19 @@ margin-top: 3rem;
 .choices button{
   font-size: 1.5rem;
   padding: 0.5rem 2rem;
+}
+
+
+.winner-modal-content{
+  width: 30%;
+}
+.winner{
+  font-size: 3rem;
+}
+
+
+.winner-modal-content button{
+  font-size: 2rem;
 }
 
 }
