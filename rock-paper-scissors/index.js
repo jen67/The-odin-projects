@@ -1,9 +1,21 @@
 const winnerModal = document.querySelector(".winner-modal");
 const winnerText = document.querySelector(".winner-text");
+const playAgainBtn = document.querySelector(".play-again");
 
 let playerScore = 0;
 let computerScore = 0;
 let winner;
+
+function playAgain() {
+    playerScore = 0;
+    computerScore = 0;
+    winnerModal.style.display = "none";
+    document.querySelector("#pscore").textContent = playerScore;
+    document.querySelector("#cscore").textContent = computerScore;
+    document.querySelector(".playerhand").src = `./images/rock.svg`;
+    document.querySelector(".computerhand").src = `./images/rock.svg`;
+    game();
+}
 
 function getComputerChoice() {
   const computerOptions = ["rock", "paper", "scissors"];
