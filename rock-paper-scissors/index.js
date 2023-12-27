@@ -37,11 +37,12 @@ function playRound(playerChoice, computerChoice) {
 
 function game() {
   function handleOptionClick() {
-    if (playerScore < 5 && computerScore < 5) {
+      if (playerScore < 5 && computerScore < 5) {
+        const playerChoice = this.textContent.toLowerCase();
       const computerChoice = getComputerChoice();
 
       // compare hands
-      playRound(this.textContent, computerChoice);
+      playRound(playerChoice, computerChoice);
 
       // update images
       document.querySelector(
