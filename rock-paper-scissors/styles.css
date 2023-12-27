@@ -215,6 +215,7 @@ g {
 }
 
 .handDisplay{
+  height: 100px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -433,4 +434,5 @@ margin-top: 3rem;
 #score{
   font-size: 2rem;
 
+}
 }

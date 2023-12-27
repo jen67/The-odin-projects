@@ -49,8 +49,12 @@ function handleOptionClick() {
     playRound(playerChoice, computerChoice);
 
     // update images
-    document.querySelector(".playerhand").src = `./images/${this.textContent}.svg`;
-    document.querySelector(".computerhand").src = `./images/${computerChoice}.svg`;
+    document.querySelector(
+      ".playerhand"
+    ).src = `./images/${this.textContent}.svg`;
+    document.querySelector(
+      ".computerhand"
+    ).src = `./images/${computerChoice}.svg`;
 
     // update scores directly
     document.querySelector("#pscore").textContent = playerScore;
@@ -66,8 +70,8 @@ function handleOptionClick() {
 
     // Display the winner modal
     winnerModal.style.display = "block";
-      winnerText.textContent = `${winner.textContent}`;
-      modalScoreDisplay.textContent = `Final score: ${playerScore} - ${computerScore}`;
+    winnerText.textContent = `${winner.textContent}`;
+    modalScoreDisplay.textContent = `Final score: ${playerScore} - ${computerScore}`;
   }
 }
 
