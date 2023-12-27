@@ -9,8 +9,8 @@ const closeBtn = document.querySelector(".close");
 
 // handles the game rules modal
 gameRules.addEventListener("click", () => {
-  gameRulesContainer.style.display = "block";
-  gameContainer.style.display = "none";
+    gameContainer.style.display = "none";
+    gameRulesContainer.style.display = "block";
 });
 
 closeBtn.addEventListener("click", () => {
