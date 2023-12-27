@@ -94,4 +94,5 @@ Add event listener for "Play Again" button:
   Call playAgain function when the button is clicked
 
 Call the game function to start the game
+
 ```
