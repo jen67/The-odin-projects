@@ -1,7 +1,6 @@
 :root {
   /* background */
   --light-grey: hsl(200, 16%, 95%);
-  --torquiose: hsl(172, 69%, 56%);
   /* primary color */
   --Dogger-blue: hsl(214, 66%, 53%);
   --Slate-slue: hsl(232, 26%, 46%);
@@ -34,9 +33,6 @@ h1 {
   font-size: 2rem;
 }
 
-/* .game-container{
-  display: none;
-} */
 span{
   font-weight: 700;
   font-size: 1.3rem;
@@ -184,6 +180,8 @@ g {
 .dark-mode .triangle{
     stroke: var(--light-grey); 
 }
+
+
 
 /* My main game  */
 .playerhand {
