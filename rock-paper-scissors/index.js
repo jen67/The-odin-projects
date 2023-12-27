@@ -1,3 +1,4 @@
+const result = document.querySelector("#results");
 const winnerModal = document.querySelector(".winner-modal");
 const winnerText = document.querySelector(".winner-text");
 const playAgainBtn = document.querySelector(".play-again");
@@ -7,15 +8,17 @@ let computerScore = 0;
 let winner;
 
 function playAgain() {
-    playerScore = 0;
-    computerScore = 0;
-    winnerModal.style.display = "none";
-    document.querySelector("#pscore").textContent = playerScore;
-    document.querySelector("#cscore").textContent = computerScore;
-    document.querySelector(".playerhand").src = `./images/rock.svg`;
-    document.querySelector(".computerhand").src = `./images/rock.svg`;
-    game();
+winnerModal.style.display = "none";
+  winner.textContent = "Make your choice";
+  result.textContent = "The first to score 5 points wins the game";
+  document.querySelector("#pscore").textContent = 0;
+  document.querySelector("#cscore").textContent = 0;
+  document.querySelector(".playerhand").src = `./images/rock.svg`;
+  document.querySelector(".computerhand").src = `./images/rock.svg`;
+  game();
 }
+
+playAgainBtn.addEventListener("click", playAgain);
 
 function getComputerChoice() {
   const computerOptions = ["rock", "paper", "scissors"];
@@ -24,11 +27,10 @@ function getComputerChoice() {
 }
 
 function playRound(playerChoice, computerChoice) {
-    winner = document.querySelector(".final-results");
-    const result = document.querySelector("#results");
+  winner = document.querySelector(".final-results");
 
-    if (playerChoice === computerChoice) {
-      result.textContent = ` ${playerChoice} ties ${computerChoice}.`;
+  if (playerChoice === computerChoice) {
+    result.textContent = ` ${playerChoice} ties ${computerChoice}.`;
     winner.textContent = "It's a tie";
   } else {
     if (
@@ -36,11 +38,11 @@ function playRound(playerChoice, computerChoice) {
       (playerChoice === "paper" && computerChoice === "rock") ||
       (playerChoice === "scissors" && computerChoice === "paper")
     ) {
-        result.textContent = ` ${playerChoice} beats ${computerChoice}.`;
+      result.textContent = ` ${playerChoice} beats ${computerChoice}.`;
       winner.textContent = `You win! 🎉`;
       playerScore++;
     } else {
-        result.textContent = ` ${computerChoice} beats ${playerChoice}.`;
+      result.textContent = ` ${computerChoice} beats ${playerChoice}.`;
       winner.textContent = `You lose! 😞`;
       computerScore++;
     }
@@ -52,8 +54,8 @@ function playRound(playerChoice, computerChoice) {
 
 function game() {
   function handleOptionClick() {
-      if (playerScore < 5 && computerScore < 5) {
-        const playerChoice = this.textContent.toLowerCase();
+    if (playerScore < 5 && computerScore < 5) {
+      const playerChoice = this.textContent.toLowerCase();
       const computerChoice = getComputerChoice();
 
       // compare hands
@@ -76,17 +78,18 @@ function game() {
     if (playerScore === 5 || computerScore === 5) {
       // Remove event listeners to prevent further clicks
       document.querySelectorAll(".choices button").forEach((option) => {
-          option.removeEventListener("click", handleOptionClick);
-          winnerModal.style.display = "block";
-          winnerText.textContent = `${winner.textContent} Final Score: ${playerScore} - ${computerScore}`
-          
+        option.removeEventListener("click", handleOptionClick);
       });
+
+      // Display the winner modal
+      winnerModal.style.display = "block";
+      winnerText.textContent = `${winner.textContent} Final Score: ${playerScore} - ${computerScore}`;
     }
   }
 
   // Add event listeners
   document.querySelectorAll(".choices button").forEach((option) => {
-      option.addEventListener("click", handleOptionClick);
+    option.addEventListener("click", handleOptionClick);
       winnerModal.style.display = "none";
   });
 }
