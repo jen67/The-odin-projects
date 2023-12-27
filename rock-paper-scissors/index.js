@@ -1,6 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
-let winner; // Declare winner as a global variable
+let winner;
 
 function getComputerChoice() {
   const computerOptions = ["rock", "paper", "scissors"];
@@ -9,12 +9,11 @@ function getComputerChoice() {
 }
 
 function playRound(playerChoice, computerChoice) {
-  winner = document.querySelector(".results"); // Assign winner within playRound
+  winner = document.querySelector(".results");
 
   if (playerChoice === computerChoice) {
     winner.textContent = "It's a tie";
   } else {
-    // checking for rock, paper, and scissors
     if (
       (playerChoice === "rock" && computerChoice === "scissors") ||
       (playerChoice === "paper" && computerChoice === "rock") ||
@@ -33,39 +32,39 @@ function playRound(playerChoice, computerChoice) {
 }
 
 function game() {
-  function playOptions() {
-    const playOptions = document.querySelectorAll(".choices button");
-    const playerHand = document.querySelector(".playerhand");
-    const computerHand = document.querySelector(".computerhand");
+  function handleOptionClick() {
+    if (playerScore < 5 && computerScore < 5) {
+      const computerChoice = getComputerChoice();
 
-    playOptions.forEach((option) => {
-      option.addEventListener("click", function () {
-        if (playerScore < 5 && computerScore < 5) {
-          const computerChoice = getComputerChoice();
+      // compare hands
+      playRound(this.textContent, computerChoice);
 
-          // compare hands
-          playRound(this.textContent, computerChoice);
+      // update images
+      document.querySelector(
+        ".playerhand"
+      ).src = `./images/${this.textContent}.svg`;
+      document.querySelector(
+        ".computerhand"
+      ).src = `./images/${computerChoice}.svg`;
 
-          // update images
-          playerHand.src = `./images/${this.textContent}.svg`;
-          computerHand.src = `./images/${computerChoice}.svg`;
+      // update scores directly
+      document.querySelector("#pscore").textContent = playerScore;
+      document.querySelector("#cscore").textContent = computerScore;
+    }
 
-          // update scores directly
-          document.querySelector("#pscore").textContent = playerScore;
-          document.querySelector("#cscore").textContent = computerScore;
-        }
-
-        // Check for game end
-        if (playerScore === 5 || computerScore === 5) {
-          displayFinalResult();
-          // Remove event listeners to prevent further clicks
-          playOptions.forEach((option) => option.removeEventListener("click"));
-        }
+    // Check for game end
+    if (playerScore === 5 || computerScore === 5) {
+      // Remove event listeners to prevent further clicks
+      document.querySelectorAll(".choices button").forEach((option) => {
+        option.removeEventListener("click", handleOptionClick);
       });
-    });
+    }
   }
 
-  playOptions();
+  // Add event listeners
+  document.querySelectorAll(".choices button").forEach((option) => {
+    option.addEventListener("click", handleOptionClick);
+  });
 }
 
 // Call the game function to start the game
