@@ -1,4 +1,5 @@
-const winnerModal = document.querySelector(".winner-modal-content");
+const winnerModal = document.querySelector(".winner-modal");
+const winnerText = document.querySelector(".winner-text");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -64,6 +65,8 @@ function game() {
       // Remove event listeners to prevent further clicks
       document.querySelectorAll(".choices button").forEach((option) => {
           option.removeEventListener("click", handleOptionClick);
+          winnerModal.style.display = "block";
+          winnerText.textContent = `${winner.textContent} Final Score: ${playerScore} - ${computerScore}`
           
       });
     }
@@ -71,7 +74,8 @@ function game() {
 
   // Add event listeners
   document.querySelectorAll(".choices button").forEach((option) => {
-    option.addEventListener("click", handleOptionClick);
+      option.addEventListener("click", handleOptionClick);
+      winnerModal.style.display = "none";
   });
 }
 

@@ -303,7 +303,7 @@ margin-top: 3rem;
   text-align: center;
 }
 
-.winner{
+.winner-text{
   font-size: 2rem;
 }
 
@@ -417,7 +417,7 @@ margin-top: 3rem;
 .winner-modal-content{
   width: 30%;
 }
-.winner{
+.winner-text{
   font-size: 3rem;
 }
 
