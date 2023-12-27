@@ -97,5 +97,6 @@ Call the game function to start the game
 
 ```
 
-# webpage view
-![Website Image](./images/darkthemeview.jpeg);
+## webpage view
+
+<img src="./images/darkthemeview.jpeg" alt="Tasks" width="500">
