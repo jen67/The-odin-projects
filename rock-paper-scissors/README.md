@@ -4,7 +4,7 @@ This is one of the projects given in the-odin-foundation projects
 
 ## Live Demo
 
-Visit the live demo [here](https://github.com/jen67/The-odin-projects/rock-paper-scissors/)
+Visit the live demo [here](https://jen67.github.io/The-odin-projects/rock-paper-scissors/)
 
 ## Algorithm
 
