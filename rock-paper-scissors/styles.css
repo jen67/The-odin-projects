@@ -279,6 +279,10 @@ margin-top: 3rem;
   font-weight: 400;
   margin-top: 3rem;
 }
+
+.winner-modal{
+  background-color: rgba ();
+}
 @media screen and (min-width: 768px) {
   svg {
     width: 400px;
