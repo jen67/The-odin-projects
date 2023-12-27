@@ -1,3 +1,5 @@
+const winnerModal = document.querySelector(".winner-modal-content");
+
 let playerScore = 0;
 let computerScore = 0;
 let winner;
@@ -61,7 +63,8 @@ function game() {
     if (playerScore === 5 || computerScore === 5) {
       // Remove event listeners to prevent further clicks
       document.querySelectorAll(".choices button").forEach((option) => {
-        option.removeEventListener("click", handleOptionClick);
+          option.removeEventListener("click", handleOptionClick);
+          
       });
     }
   }
