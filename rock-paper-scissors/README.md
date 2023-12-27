@@ -96,3 +96,6 @@ Add event listener for "Play Again" button:
 Call the game function to start the game
 
 ```
+
+# webpage view
+![Website Image](./images/darkthemeview.jpeg);
