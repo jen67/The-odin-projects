@@ -7,108 +7,92 @@ const gameContainer = document.querySelector(".game-container");
 const gameRulesContainer = document.querySelector(".about-game-modal");
 const closeBtn = document.querySelector(".close");
 
-//handles the game rules modal
-gameRules.addEventListener("click", () => { 
-    gameRulesContainer.style.display = "block";
-    gameContainer.style.display = "none";
+// handles the game rules modal
+gameRules.addEventListener("click", () => {
+  gameRulesContainer.style.display = "block";
+  gameContainer.style.display = "none";
 });
 
-closeBtn.addEventListener("click", () => { 
-    gameRulesContainer.style.display = "none";
-    gameContainer.style.display = "block";
+closeBtn.addEventListener("click", () => {
+  gameRulesContainer.style.display = "none";
+  gameContainer.style.display = "block";
 });
 
 themeContainer.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    darkThemeToggler.style.display = "block ";
-    lightThemeToggler.style.display = "none";
-    
-    if (body.classList.contains("dark-mode")) {
-        darkThemeToggler.style.display = "none";
-        lightThemeToggler.style.display = "block"; 
-    }
+  body.classList.toggle("dark-mode");
+  darkThemeToggler.style.display = body.classList.contains("dark-mode")
+    ? "none"
+    : "block";
+  lightThemeToggler.style.display = body.classList.contains("dark-mode")
+    ? "block"
+    : "none";
 });
 
-function game() {
-  let playerScore = 0;
-  let computerScore = 0;
+let playerScore = 0;
+let computerScore = 0;
 
+function getComputerChoice() {
+  const computerOptions = ["rock", "paper", "scissors"];
+  const computerNumber = Math.floor(Math.random() * 3);
+  return computerOptions[computerNumber];
+}
+
+function playRound(playerChoice, computerChoice) {
+  const winner = document.querySelector(".results");
+
+  if (playerChoice === computerChoice) {
+    winner.textContent = "It's a tie";
+  } else {
+      
+    // checking for rock, paper, and scissors
+    if (
+      (playerChoice === "rock" && computerChoice === "scissors") ||
+      (playerChoice === "paper" && computerChoice === "rock") ||
+      (playerChoice === "scissors" && computerChoice === "paper")
+    ) {
+      winner.textContent = `You win! ${playerChoice} beats ${computerChoice}.`;
+      playerScore++;
+    } else {
+      winner.textContent = `You lose! ${computerChoice} beats ${playerChoice}.`;
+      computerScore++;
+    }
+
+    console.log("Player Score:", playerScore);
+    console.log("Computer Score:", computerScore);
+  }
+}
+
+function game() {
   function playOptions() {
     const playOptions = document.querySelectorAll(".choices button");
     const playerHand = document.querySelector(".playerhand");
     const computerHand = document.querySelector(".computerhand");
-    const player = document.querySelector("#pscore");
-    const computer = document.querySelector("#cscore");
-    const winner = document.querySelector(".results");
-
-    //computer options
-    const computerOptions = ["rock", "paper", "scissors"];
+    // const player = document.querySelector("#pscore");
+    // const computer = document.querySelector("#cscore");
 
     playOptions.forEach((option) => {
       option.addEventListener("click", function () {
-        //computer choice
-        const computerNumber = Math.floor(Math.random() * 3);
-        const computerChoice = computerOptions[computerNumber];
+        const computerChoice = getComputerChoice();
 
-        //compare hands
-        compareMatch(this.textContent, computerChoice);
+        // compare hands
+        playRound(this.textContent, computerChoice);
 
-        //update images
+        // update images
         playerHand.src = `./images/${this.textContent}.svg`;
         computerHand.src = `./images/${computerChoice}.svg`;
 
-        // update scores
-        player.textContent = playerScore;
-        computer.textContent = computerScore;
+        // update scores directly
+        document.querySelector("#pscore").textContent = playerScore;
+        document.querySelector("#cscore").textContent = computerScore;
+
+        // update winner message
+        document.querySelector(".results").textContent = winner.textContent;
       });
     });
   }
 
-  const compareMatch = (playerChoice, computerChoice) => {
-
-    // checking for a tie
-    if (playerChoice === computerChoice) {
-      winner.textContent = "It's a tie";
-    } else {
-      //checking for rock
-      if (playerChoice === "rock") {
-        if (computerChoice === "scissors") {
-          winner.textContent = "You win";
-          playerScore++;
-        } else {
-          winner.textContent = "Computer wins";
-          computerScore++;
-        }
-      }
-
-      // checking for paper
-      if (playerChoice === "paper") {
-        if (computerChoice === "scissors") {
-          winner.textContent = "Computer wins";
-          computerScore++;
-        } else {
-          winner.textContent = "You win";
-          playerScore++;
-        }
-      }
-
-      //checking for scissors
-      if (playerChoice === "scissors") {
-        if (computerChoice === "rock") {
-          winner.textContent = "Computer wins";
-          computerScore++;
-        } else {
-          winner.textContent = "You win";
-          playerScore++;
-        }
-        }
-        
-        console.log("Player Score:", playerScore);
-        console.log("Computer Score:", computerScore);
-    }
-  };
-
   playOptions();
 }
 
+// Call the game function to start the game
 game();
