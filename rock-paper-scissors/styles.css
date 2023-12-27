@@ -281,7 +281,7 @@ margin-top: 3rem;
 
 .winner-modal{
   background-color: rgba(225, 225, 225, 0.1);
-  backdrop-filter: blur(60px);
+  backdrop-filter: blur(90px);
   position: fixed;
   top: 0;
   left: 0;
