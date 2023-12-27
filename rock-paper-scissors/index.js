@@ -54,7 +54,7 @@ function handleOptionClick() {
     ).src = `./images/${this.textContent}.svg`;
     document.querySelector(
       ".computerhand"
-    ).src = `../images/${computerChoice}.svg`;
+    ).src = `./images/${computerChoice}.svg`;
 
     // update scores directly
     document.querySelector("#pscore").textContent = playerScore;
