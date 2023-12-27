@@ -51,10 +51,10 @@ function handleOptionClick() {
     // update images
     document.querySelector(
       ".playerhand"
-    ).src = `/images/${this.textContent}.svg`;
+    ).src = `./images/${this.textContent}.svg`;
     document.querySelector(
       ".computerhand"
-    ).src = `/images/${computerChoice}.svg`;
+    ).src = `./images/${computerChoice}.svg`;
 
     // update scores directly
     document.querySelector("#pscore").textContent = playerScore;
@@ -93,8 +93,8 @@ function playAgain() {
   document.querySelector("#cscore").textContent = 0;
   playerScore = 0; // Reset player score
   computerScore = 0; // Reset computer score
-  document.querySelector(".playerhand").src = `/images/rock.svg`;
-  document.querySelector(".computerhand").src = `/images/rock.svg`;
+  document.querySelector(".playerhand").src = `./images/rock.svg`;
+  document.querySelector(".computerhand").src = `./images/rock.svg`;
 
   // Reattach event listeners
   document.querySelectorAll(".choices button").forEach((option) => {
