@@ -291,9 +291,33 @@ margin-top: 3rem;
   z-index: 1000;
 }
 
+.winner-modal-content{
+  background-color: var(--Slate-slue);
+  color: var(--light-grey);
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10rem;
+  padding: 2rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.winner{
+  font-size: 3rem;
+}
 
 
-
+.winner-modal-content button{
+  cursor: pointer;
+  color: var(--light-grey);
+  background-color: var(--Dogger-blue); 
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-top: 2rem;
+}
 @media screen and (min-width: 768px) {
   svg {
     width: 400px;
