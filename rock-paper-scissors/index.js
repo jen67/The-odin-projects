@@ -9,9 +9,11 @@ function getComputerChoice() {
 }
 
 function playRound(playerChoice, computerChoice) {
-  winner = document.querySelector(".results");
+    winner = document.querySelector(".final-results");
+    const result = document.querySelector("#results");
 
-  if (playerChoice === computerChoice) {
+    if (playerChoice === computerChoice) {
+      result.textContent = ` ${playerChoice} ties ${computerChoice}.`;
     winner.textContent = "It's a tie";
   } else {
     if (
@@ -19,10 +21,12 @@ function playRound(playerChoice, computerChoice) {
       (playerChoice === "paper" && computerChoice === "rock") ||
       (playerChoice === "scissors" && computerChoice === "paper")
     ) {
-      winner.textContent = `You win! ${playerChoice} beats ${computerChoice}.`;
+        result.textContent = ` ${playerChoice} beats ${computerChoice}.`;
+      winner.textContent = `You win! 🎉`;
       playerScore++;
     } else {
-      winner.textContent = `You lose! ${computerChoice} beats ${playerChoice}.`;
+        result.textContent = ` ${computerChoice} beats ${playerChoice}.`;
+      winner.textContent = `You lose! 😞`;
       computerScore++;
     }
 
