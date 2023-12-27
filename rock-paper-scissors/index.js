@@ -7,19 +7,6 @@ let playerScore = 0;
 let computerScore = 0;
 let winner;
 
-function playAgain() {
-winnerModal.style.display = "none";
-  winner.textContent = "Make your choice";
-  result.textContent = "The first to score 5 points wins the game";
-  document.querySelector("#pscore").textContent = 0;
-  document.querySelector("#cscore").textContent = 0;
-  document.querySelector(".playerhand").src = `./images/rock.svg`;
-  document.querySelector(".computerhand").src = `./images/rock.svg`;
-  game();
-}
-
-playAgainBtn.addEventListener("click", playAgain);
-
 function getComputerChoice() {
   const computerOptions = ["rock", "paper", "scissors"];
   const computerNumber = Math.floor(Math.random() * 3);
@@ -52,47 +39,64 @@ function playRound(playerChoice, computerChoice) {
   }
 }
 
-function game() {
-  function handleOptionClick() {
-    if (playerScore < 5 && computerScore < 5) {
-      const playerChoice = this.textContent.toLowerCase();
-      const computerChoice = getComputerChoice();
+function handleOptionClick() {
+  if (playerScore < 5 && computerScore < 5) {
+    const playerChoice = this.textContent.toLowerCase();
+    const computerChoice = getComputerChoice();
 
-      // compare hands
-      playRound(playerChoice, computerChoice);
+    // compare hands
+    playRound(playerChoice, computerChoice);
 
-      // update images
-      document.querySelector(
-        ".playerhand"
-      ).src = `./images/${this.textContent}.svg`;
-      document.querySelector(
-        ".computerhand"
-      ).src = `./images/${computerChoice}.svg`;
+    // update images
+    document.querySelector(".playerhand").src = `./images/${this.textContent}.svg`;
+    document.querySelector(".computerhand").src = `./images/${computerChoice}.svg`;
 
-      // update scores directly
-      document.querySelector("#pscore").textContent = playerScore;
-      document.querySelector("#cscore").textContent = computerScore;
-    }
-
-    // Check for game end
-    if (playerScore === 5 || computerScore === 5) {
-      // Remove event listeners to prevent further clicks
-      document.querySelectorAll(".choices button").forEach((option) => {
-        option.removeEventListener("click", handleOptionClick);
-      });
-
-      // Display the winner modal
-      winnerModal.style.display = "block";
-      winnerText.textContent = `${winner.textContent} Final Score: ${playerScore} - ${computerScore}`;
-    }
+    // update scores directly
+    document.querySelector("#pscore").textContent = playerScore;
+    document.querySelector("#cscore").textContent = computerScore;
   }
 
+  // Check for game end
+  if (playerScore === 5 || computerScore === 5) {
+    // Remove event listeners to prevent further clicks
+    document.querySelectorAll(".choices button").forEach((option) => {
+      option.removeEventListener("click", handleOptionClick);
+    });
+
+    // Display the winner modal
+    winnerModal.style.display = "block";
+    winnerText.textContent = `${winner.textContent} Final Score: ${playerScore} - ${computerScore}`;
+  }
+}
+
+function game() {
   // Add event listeners
   document.querySelectorAll(".choices button").forEach((option) => {
     option.addEventListener("click", handleOptionClick);
-      winnerModal.style.display = "none";
+    winnerModal.style.display = "none";
   });
 }
+
+function playAgain() {
+  winnerModal.style.display = "none"; // Hide the winner modal
+
+  // Reset scores and text content
+  winner.textContent = "Make your choice";
+  result.textContent = "The first to score 5 points wins the game";
+  document.querySelector("#pscore").textContent = 0;
+  document.querySelector("#cscore").textContent = 0;
+  playerScore = 0; // Reset player score
+  computerScore = 0; // Reset computer score
+  document.querySelector(".playerhand").src = `./images/rock.svg`;
+  document.querySelector(".computerhand").src = `./images/rock.svg`;
+
+  // Reattach event listeners
+  document.querySelectorAll(".choices button").forEach((option) => {
+    option.addEventListener("click", handleOptionClick);
+  });
+}
+
+playAgainBtn.addEventListener("click", playAgain);
 
 // Call the game function to start the game
 game();
