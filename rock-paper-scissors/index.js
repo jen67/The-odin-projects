@@ -51,7 +51,7 @@ function handleOptionClick() {
     // update images
     document.querySelector(
       ".playerhand"
-    ).src = `./images/${this.textContent}.svg`;
+    ).src = `./images/${playerChoice}.svg`;
     document.querySelector(
       ".computerhand"
     ).src = `./images/${computerChoice}.svg`;
