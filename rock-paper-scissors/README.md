@@ -33,35 +33,65 @@ Steps in the Rock, Paper, Scissors game:
 ## Pseudocode
 
 ```javaScript
-function getUserChoice() {
-    // Prompt the user to enter their choice (Rock, Paper, or Scissors)
-    // Validate the input to ensure it is a valid choice
-    // Return the user's choice
-}
+Initialize game variables:
+  playerScore = 0
+  computerScore = 0
+  winner = undefined
 
-function getComputerChoice() {
-    // Generate a random number (1, 2, or 3) to represent Rock, Paper, or Scissors
-    // Assign Rock, Paper, or Scissors based on the generated number
-    // Return the computer's choice
-}
+Function getComputerChoice():
+  computerOptions = ["rock", "paper", "scissors"]
+  computerNumber = Random number between 0 and 2
+  return computerOptions[computerNumber]
 
-function playRound(playerSelection, computerSelection) {
-    // Compare PlayerSelection and computerSelection to determine the winner
-    // Display the result to the user
+Function playRound(playerChoice, computerChoice):
+  winner = Document element with class "final-results"
 
-    // Check for a tie
-    if (playerSelection === computerSelection) {
-        return "It's a tie! Replay the round.";
-    }
+  If playerChoice is equal to computerChoice:
+    Display a tie message in the result element
+    Set the winner text content to "It's a tie"
+  Else if playerChoice beats computerChoice:
+    Display a winning message in the result element
+    Set the winner text content to "You win! 🎉"
+    Increment playerScore
+  Else:
+    Display a losing message in the result element
+    Set the winner text content to "You lose! 😞"
+    Increment computerScore
 
-}
+  Log the current player and computer scores
 
-function playGame() {
-    userChoice = getUserChoice()
+Function handleOptionClick():
+  If playerScore is less than 5 and computerScore is less than 5:
+    playerChoice = Convert clicked button text content to lowercase
     computerChoice = getComputerChoice()
-    playRound(userChoice, computerChoice) 
-}
 
-// Call the playGame function to start the game
-playGame()
+    Call playRound function with playerChoice and computerChoice
+
+    Update player and computer hand images
+    Update player and computer scores in the DOM
+
+  Check for game end:
+    If playerScore is equal to 5 or computerScore is equal to 5:
+      Remove event listeners from all choice buttons
+      Display the winner modal
+      Set the winnerText content to the winner's message
+      Display the final score in the modal
+
+Function game():
+  Add event listeners to all choice buttons
+  Set the initial display state of winnerModal to "none"
+
+Function playAgain():
+  Hide the winner modal
+  Reset scores and text content
+  Set winner text content to "Make your choice"
+  Set result text content to "The first to score 5 points wins the game"
+  Reset playerScore and computerScore to 0
+  Reset player and computer hand images to the initial state
+  Reattach event listeners to all choice buttons
+
+Add event listener for "Play Again" button:
+  Call playAgain function when the button is clicked
+
+Call the game function to start the game
 ```
