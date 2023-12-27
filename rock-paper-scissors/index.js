@@ -2,6 +2,7 @@ const result = document.querySelector("#results");
 const winnerModal = document.querySelector(".winner-modal");
 const winnerText = document.querySelector(".winner-text");
 const playAgainBtn = document.querySelector(".play-again");
+const modalScoreDisplay = document.querySelector("#score");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -65,7 +66,8 @@ function handleOptionClick() {
 
     // Display the winner modal
     winnerModal.style.display = "block";
-    winnerText.textContent = `${winner.textContent} Final Score: ${playerScore} - ${computerScore}`;
+      winnerText.textContent = `${winner.textContent}`;
+      modalScoreDisplay.textContent = `Final score: ${playerScore} - ${computerScore}`;
   }
 }
 

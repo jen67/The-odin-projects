@@ -320,6 +320,10 @@ margin-top: 3rem;
   margin: 2rem 0 2rem 0;
   font-weight: 700;
 }
+
+#score{
+  font-size: 1.2rem;
+}
 @media screen and (min-width: 768px) {
   svg {
     width: 400px;
@@ -415,7 +419,7 @@ margin-top: 3rem;
 
 
 .winner-modal-content{
-  width: 30%;
+  max-width: 500px;
 }
 .winner-text{
   font-size: 3rem;
@@ -425,5 +429,8 @@ margin-top: 3rem;
 .winner-modal-content button{
   font-size: 2rem;
 }
+
+#score{
+  font-size: 2rem;
 
 }
