@@ -74,7 +74,7 @@ Function handleOptionClick():
     If playerScore is equal to 5 or computerScore is equal to 5:
       Remove event listeners from all choice buttons
       Display the winner modal
-      Set the winnerText content to the winner's message
+      Set the winnerText content to the winners message
       Display the final score in the modal
 
 Function game():
